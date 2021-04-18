@@ -5,14 +5,14 @@ const sections = document.querySelectorAll("section[id]");
 jQuery(function () {
 	
 	//email js
-	emailjs.init('user_kVW71BDLCqrTPVJy9WUmp');
+	emailjs.init('user_G57BWMFen2jpmEtT5srsn');
 	document.getElementById("contact-form").reset();
 	document.getElementById('contact-form').addEventListener('submit', function(event) {
         event.preventDefault();
         // generate a five digit number for the contact_number variable
         this.contact_number.value = Math.random() * 100000 | 0;
         // these IDs from the previous steps
-        emailjs.sendForm('service_3k9c63p', 'template_h9p2cko', this)
+        emailjs.sendForm('service_zjng9bo', 'template_2n8ds7b', this)
             .then(function() {
                 console.log('SUCCESS!');
                 document.getElementById("contact-form").reset();
@@ -41,7 +41,7 @@ jQuery(function () {
 	}
 	
 	//scroll down
-	jQuery(".scroll-div a").click(function (e) {
+	jQuery(".scroll-div a, .contact-btn").click(function (e) {
 		e.preventDefault();
 		var target = jQuery(this).attr('href');
 		var HeaderHeight;
@@ -90,7 +90,7 @@ jQuery(function () {
 		jQuery('.project-slider').slick({
 			speed: 1500,
 			slidesToShow: 4,
-			slidesToScroll: 1,
+			slidesToScroll: 2,
 			autoplay: false,
 			infinite:true,
 			arrows: true,
